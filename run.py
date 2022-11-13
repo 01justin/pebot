@@ -81,14 +81,6 @@ def findTTIFile(PNGpath):
             shutil.copy(os.path.abspath(f'{root}\{TTIfileName}'), TTI_path)
 
 
-
-
-    
-# TESTPNG = r"D:\00 Working\PE BOT\00 SOURCE\reclaimed by nature by beeple  wallpaper  highly detailed  trending on artstation. [Stable Diffusion plms] 41338889.png"
-# findTTIFile(TESTPNG)
-
-# CLEAN UP TEMP FOLDER
-
 if __name__ == '__main__':
         
     for folder in scanDirFolders(SOURCE_path):
@@ -197,14 +189,8 @@ if __name__ == '__main__':
         clips = [ImageClip(m).set_duration(2)
         for m in tempPNGpath]
 
-        # main_clip = concatenate_videoclips(clips, method="chain")
-        # main_clip.write_videofile(EXPORT_path + f"/{getDateString()}-[{os.path.basename(folder)}].mp4", threads=24, bitrate="2000k", audio_codec="aac", fps=30, codec="h264_nvenc", remove_temp=True,) 
-
         main_clip = concatenate_videoclips(clips, method="chain")
-        # overlay_clip = VideoFileClip(os.path.join(FOOTAGE_path, "4sbar1920.mov"))    #20221003
-        # overlay_clip = vfx.loop(overlay_clip, duration=main_clip.duration)    #20221003
-        
-        
+   
         # AUDIO COMPARTMENT
         audio_fileList = []
         audio_durationList = []
@@ -483,29 +469,3 @@ if __name__ == '__main__':
         moveFolder(folder, PASTPROJECTS_path)
                         
                         
-                
-                
-                
-                
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
